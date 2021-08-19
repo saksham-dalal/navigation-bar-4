@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  user-select: none;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 80px;
+  background-color: coral;
+  overflow: hidden;
+  transition: 0.8s;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.562);
+}
+
+.sidebar:hover {
+  width: 350px;
+}
+
+.sidebar:hover .menu ul li span {
+  padding: 40px 70px;
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.sidebar .menu {
+  display: flex;
+  width: 80px;
+  height: 100%;
+  background-color: coral;
+  color: white;
+}
+
+.menu a i {
+  margin: 40px 0 10px 20px;
+  font-size: 40px;
+}
+
+.menu a span {
+  position: absolute;
+  margin: 40px 32px;
+  font-size: 30px;
+  opacity: 0;
+  transition: 1s;
+  color: white;
+}
+
+.sidebar:hover .menu a span {
+  opacity: 1;
+}
+
+.menu ul li {
+  display: flex;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.menu ul li i {
+  font-size: 35px;
+  padding: 40px 0 20px 0;
+}
+
+.menu ul li span {
+  position: absolute;
+  color: white;
+  letter-spacing: 2px;
+  padding: 40px 0px;
+  pointer-events: none;
+  font-size: 25px;
+  transition: 0.8s;
+  opacity: 0;
+}
+
+.menu ul li:hover span {
+  margin-left: 20px;
+}
